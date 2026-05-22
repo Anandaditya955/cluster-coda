@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+
+metadata:
+  name: nginx-replicaset
+  labels:
+    app: web
+
+spec:   # Defines the behaviour of ReplicaSet
+  replicas: 2
+
+  selector:
+    matchLabels:
+      web: nginx
+
+  template:
+    metadata:
+      labels:
+        web: nginx
+
+    spec:   # Defines the behaviour of the Pod
+      containers:
+        - name: nginx-container
+          image: nginx
+          ports:
+            - containerPort: 80

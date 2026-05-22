@@ -1,0 +1,11 @@
+kind: Pod
+
+metadata:
+  name: my-pod
+
+spec:
+  containers:
+    - name: aditya-ghee
+      image: anandaditya955/ghee:v1.1.22
+      ports:
+        - containerPort: 5656

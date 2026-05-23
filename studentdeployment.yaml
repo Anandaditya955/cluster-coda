@@ -23,3 +23,10 @@ spec:
 
           ports:
             - containerPort: 5978
+
+          env:
+            - name: FLASK_ENV
+              value: production
+
+            - name: APP_PORT
+              value: "5978"

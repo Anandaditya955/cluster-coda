@@ -15,11 +15,11 @@ spec:
     metadata:
       labels:
         app: studentapp
-l
+
     spec:
       containers:
         - name: studentapp-container
-          image: anandaditya955/studentapp:v1
+          image: anandaditya955/studentapp:v2
 
           ports:
             - containerPort: 5978

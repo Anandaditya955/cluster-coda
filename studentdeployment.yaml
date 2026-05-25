@@ -1,9 +1,10 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 
 metadata:
   name: studentapp-deployment
-  namespace: aditya-ns
+  namespace: prod-ns
 
 spec:
   replicas: 2
@@ -38,7 +39,7 @@ kind: Service
 
 metadata:
   name: studentapp-service
-  namespace: aditya-ns
+  namespace: prod-ns
 
 spec:
   selector:

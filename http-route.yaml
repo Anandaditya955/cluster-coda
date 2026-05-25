@@ -3,11 +3,11 @@ kind: HTTPRoute
 
 metadata:
   name: studentapp-http-route
-  namespace: aditya-ns
+  namespace: prod-ns
 
 spec:
   parentRefs:
-    - name: studentapp-gateway
+    - name: aditya-gateway
 
   rules:
     - matches:

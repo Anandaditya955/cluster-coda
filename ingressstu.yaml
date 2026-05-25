@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: studentapp-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/use-regex: "true"
+
+spec:
+  ingressClassName: nginx
+
+  rules:
+  - http:
+      paths:
+      - path: /studentapp(/|$)(.*)
+        pathType: Prefix
+
+        backend:
+          service:
+            name: studentapp-service
+            port:
+              number: 5978

@@ -28,6 +28,9 @@ spec:
             - configMapRef:
                 name: aditya-configure
 
+            - secretRef:
+                name: student-secret
+
           env:
             - name: FLASK_ENV
               value: production
@@ -51,4 +54,4 @@ spec:
       port: 5978
       targetPort: 5978
 
-  type: ClusterIP
+  type: LoadBalancer

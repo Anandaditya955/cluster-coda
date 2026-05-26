@@ -1,10 +1,8 @@
----
 apiVersion: apps/v1
 kind: Deployment
 
 metadata:
   name: studentapp-deployment
-  namespace: prod-ns
 
 spec:
   replicas: 2
@@ -26,6 +24,10 @@ spec:
           ports:
             - containerPort: 5978
 
+          envFrom:
+            - configMapRef:
+                name: aditya-configure
+
           env:
             - name: FLASK_ENV
               value: production
@@ -39,7 +41,6 @@ kind: Service
 
 metadata:
   name: studentapp-service
-  namespace: prod-ns
 
 spec:
   selector:

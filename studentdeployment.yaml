@@ -38,6 +38,15 @@ spec:
             - name: APP_PORT
               value: "5978"
 
+          volumeMounts:
+            - name: student-storage
+              mountPath: /app/data
+
+      volumes:
+        - name: student-storage
+          persistentVolumeClaim:
+            claimName: studentapp-pvc
+
 ---
 apiVersion: v1
 kind: Service

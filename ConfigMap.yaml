@@ -3,6 +3,7 @@ kind: ConfigMap
 
 metadata:
   name: aditya-configure
+  namespace: prod-ns
 
 data:
   DB_HOST: "mongodb"
@@ -10,3 +11,5 @@ data:
   DB_USER: "admin"
   APP_NAME: "studentapp"
   APP_PORT: "5978"
+  config.txt: |
+    This is ConfigMap volume file for studentapp.

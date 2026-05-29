@@ -5,7 +5,7 @@ metadata:
   name: studentapp-deployment
 
 spec:
-  replicas: {{.Values.replicas}}
+  replicas: 2
 
   selector:
     matchLabels:

@@ -45,8 +45,7 @@ spec:
 
       volumes:
         - name: student-storage
-          persistentVolumeClaim:
-            claimName: studentapp-pvc
+          emptyDir: {}
 
 ---
 apiVersion: v1

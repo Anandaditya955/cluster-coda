@@ -1,0 +1,6 @@
+apiversion: v2
+name: aditya-chart
+description: helm chat for kubernates
+version: 1.0.0
+appversion: "1.0.0"
+

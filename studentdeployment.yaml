@@ -3,6 +3,7 @@ kind: Deployment
 
 metadata:
   name: studentapp-deployment
+  namespace: prod-ns
 
 spec:
   replicas: 2
@@ -53,6 +54,7 @@ kind: Service
 
 metadata:
   name: studentapp-service
+  namespace: prod-ns
 
 spec:
   selector:

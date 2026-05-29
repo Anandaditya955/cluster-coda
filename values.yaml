@@ -1,0 +1,19 @@
+namespace:
+  name: prod-ns
+
+labels:
+  app: studentapp
+
+container:
+  name: studentapp-container
+  port: 5978
+
+image:
+  repository: anandaditya955/studentapp
+  tag: v2
+
+configMap:
+  name: aditya-configure
+
+secret:
+  name: student-secret
